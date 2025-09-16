@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+:root{
+    --color-background: #F9F6F1;   /* Soft Pearl White */
+    --color-text-dark: #1A1A1A;    /* Rich Black */
+    --color-text-light: #FFFFFF;   /* White */
+  
+    /* Primary Theme */
+    --color-primary: #1F3B4D;      /* Deep Navy Blue */
+    --color-accent: #FFD700;       /* Bright Gold */
+    --color-accent-muted: #C9A227; /* Warm Golden Yellow */
+    --color-secondary: #A67C52;    /* Bronze */
+  
+    /* States */
+    --color-hover: #EAEAEA;        /* Light hover for contrast */
+    --color-button-hover: #A67C52; /* Bronze for button hover */
+   --border:.1rem solid var(--black);
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+   font-family: 'Rubik', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+    text-transform: capitalize;
+   transition:all .2s linear;
+}
+*::selection{
+    color: white;
+    background-color: blue;
+}
+*::webkit-scroll-track{
+    background-color: transparent;
+}
+*::webkit-scroll-thumb{
+/*    background-color: transparent;*/
+    background-color: lightgray;
+}
+*::webkit-scroll-thumb:hover{
+/*    background-color: transparent;*/
+    background-color: black;
+}
+.flex{
+    display: flex;
+    align-items: center;
+   justify-content: center;
+}
+html{
+    font-size: 62.5%;
+    text-transform: capitalize;
+    overflow-x: hidden;
+}
+.body{
+    min-height:100vh; 
+    width: 100vw;
+    background-color: var(--light-white);
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    
+     padding: 1.5rem 4rem;
+   width: 600px;
+    background-color:white;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow);
+    align-items: center;
+}
+form{
+  width: 100%;
+}
+
+.container form input{
+    width: 100%;
+    border:  var(--border);
+    height: 6vh;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    padding-left: 1.5rem;
+    margin-top: 1.2rem;
+    text-transform: none;
+    
+}
+#btn{
+    background-color: var(--purple);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+#btn:hover{
+    background-color:#574f4f;
+}
+h2{
+    font-size: 3.5rem;
+    color: var(--purple);
+    text-transform: capitalize;
+    padding-top: 1rem;
+}
+select{
+  width: 100%;
+    border:  var(--border);
+    height: 6vh;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    padding-left: 1rem;
+    margin-top: 1rem;
+       
+} .p{
+    font-size:1.5rem;
+    color: #120000;
+    text-align: center;
+    margin-top: 1rem;
+}
+ .p a{
+    text-decoration: none;
+    color:#1313e0;
+    font-size: 1.5rem;
+}
+.p a:hover{
+    text-decoration: underline;
+}
+.message{
+    position: sticky;
+    top: 0;
+    height: 8vh;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.message i{
+    font-size: 2rem;
+    color: red;
+    margin-right: 5rem;
+    
+}
+.message span {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 4rem;
+}
+.message i:hover{
+    color: gray;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* media query */
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+}
+
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .container{
+        min-height:fit-content; 
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      width: 90vw;
+      background-color:white;
+      flex-direction: column;
+      justify-content: space-evenly;
+      border-radius: 2rem;
+      box-shadow: var(--box-shadow);
+      align-items: center;
+  }
+  form{
+      min-height:fit-content; 
+      width: 40rem;
+  }
+  .p{
+    font-size:2rem;
+    
+}
+ .p a{
+  
+    font-size: 2rem;
+}
+}
