@@ -57,9 +57,9 @@
      <?php include 'header.php'; ?>
      <div class="carousel hero">
          <div class="slides bg-slate-700 h-80 w-screen text-2xl">
-             <div class="slide"><img src="./images/optics1.webp" alt=""></div>
-             <div class="slide"><img src="./images/optics2.webp" alt=""></div>
-             <div class="slide"><img src="./images/optics3.webp" alt=""></div>
+             <div class="slide"><img src="./images/Website Banner (1).png" alt=""></div>
+             <div class="slide"><img src="./images/Website Banner (2).png" alt=""></div>
+             <div class="slide"><img src="./images/Website Banner (3).png" alt=""></div>
 
 
          </div>
@@ -332,8 +332,8 @@
      <!-- <hr> -->
 
      <section class="apointment">
-<h4>expert care trendy wear </h4>
-<button class="btn">plan your visit</button>
+<!-- <h4>expert care trendy wear </h4> -->
+<button class="btn visit-btn">plan your visit</button>
 <!-- <div class="form">
     <form action="">
         <input type="text" name="" id="" placeholder="Please Enter Name ">
@@ -356,9 +356,11 @@
             
           
   <div class="model-track"> <!-- this is the moving container -->
-    <div class="model-con"><img src="./images/model1.webp" alt=""><button class="btn">view product</button></div>
-    <div class="model-con"><img src="./images/model2.webp" alt=""><button class="btn">view product</button></div>
-    <div class="model-con"><img src="./images/model3.webp" alt=""><button class="btn">view product</button></div>
+    <div class="model-con"><img src="./images/model (1).png" alt=""><button class="btn">view product1</button></div>
+    <div class="model-con"><img src="./images/model (2).png" alt=""><button class="btn">view product</button></div>
+    <div class="model-con"><img src="./images/model (3).png" alt=""><button class="btn">view product</button></div>
+    <div class="model-con"><img src="./images/model (4).png" alt=""><button class="btn">view product</button></div>
+
   </div>
 </div>
 

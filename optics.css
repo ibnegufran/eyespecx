@@ -135,10 +135,13 @@ h4{
 }
 
 .header1{
-    background-color:black;
+  
+    background-color: var(--color-text-dark);
 }
 .header1 p{
-    color:#F2F2F2;
+    color:white;
+    font-family: "Rubik", sans-serif;
+    font-size: 1.5rem;
 }
 
 .header1 .container{
@@ -146,9 +149,19 @@ h4{
     justify-content: center;
     padding: 1rem 3rem;
     margin: 0 auto;
+   
     /* background-color:var(--light-color); */
 
 
+}
+
+.header1 .container p{
+     text-transform: capitalize;
+     color:white;
+     font-family: "Rubik", sans-serif;
+     font-size: 1.3rem;
+     letter-spacing: 2px;
+     word-spacing: 3px;
 }
 header .header2.active{
   position: fixed;
@@ -206,7 +219,7 @@ position: relative;
      color:var(--color-text-dark);
     margin-left: 1.5rem;
     font-size: 1.5rem;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     letter-spacing:1px;
   padding: 2rem 1.5rem;
    /* border-radius: 2rem; */
@@ -277,6 +290,46 @@ transform-origin: top;
     color:white
 }
 .dropdown .brands .brand-item a:hover{
+    color: var(--color-text-dark);
+}
+
+
+
+
+
+.about-drop{
+    background: #302e2e70; /* transparent background */
+    backdrop-filter: blur(10px);          /* frosted glass effect */
+    -webkit-backdrop-filter: blur(10px);  /* Safari support */
+    border: 1px solid rgba(77, 75, 75, 0.3); /* light border */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    padding:2rem 4rem;
+    top: 100%;
+    right: 25%;
+    /* width: 100%; */
+    /* height: 0; */
+    z-index: 10;
+    transform: scale(0);
+/* visibility: hidden; */
+transition:transform .5s ease-in-out;
+transform-origin: top;
+}
+.about-drop:hover{
+    transform: scale(1);
+    
+}
+
+.about-drop  li{
+    list-style: none;
+    margin-top: 10px;
+}
+.about-drop  li a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color:white
+}
+.about-drop  li a:hover{
     color: var(--color-text-dark);
 }
 
@@ -534,15 +587,16 @@ height: 85vh;
 .apointment{
     /* padding: 50px 20px;  */
     margin-top: 100px;
-    height: 80vh;  
-    background:linear-gradient(rgba(68, 67, 67, 0.555), rgba(68, 67, 67, 0.555)),url('./images/bg1.jpg') no-repeat;
-    background-size: cover;
+    height: 95vh;  
+    background:url('./images/Website Banner.png') no-repeat;
+    background-size: 100% 100%;
     background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
+    position: relative;
 
 }
 .apointment h4{
@@ -581,7 +635,15 @@ height: 85vh;
     width: 35vw;
     border: 1px solid rgb(212, 211, 211);
     /* box-shadow: 1px 1px 1px lightgray; */
+
+  
     border-radius: 4px;
+}
+
+.visit-btn{
+    position: absolute;
+    top: 65%;
+    left: 14%;
 }
 
  
@@ -615,26 +677,32 @@ height: 85vh;
 } 
 
 .model-img {
-    width: 25vw;
-    overflow: hidden; /* hides extra slides */
+    width: 79vw;
+    overflow: hidden; 
     margin: 20px auto;
     /* background: #111827; */
  }
- 
  .model-track {
-    display: flex;
-    transition: transform 0.5s ease;
-    flex-wrap: nowrap;
- }
- 
- .model-con {
-    flex: 0 0 25vw; /* each slide takes 25vw */
- }
- 
- .model-con img {
     width: 100%;
+    display: flex;
+    transition: transform 0.5s ease;  
+    flex-wrap: nowrap;
+    margin: 0 auto;
+column-gap: 2vw;
+    /* background-color: #111827; */
+  }
+  
+  .model-con {
+   width: 25vw;
+  }
+  
+  
+  .model-con img {
+   width: 25vw;
+    border-radius: 10px; /* thoda rounded look (optional) */
     object-fit: cover;
- }
+  }
+  
  
  .model-con button {
     width: 100%;
@@ -657,11 +725,11 @@ height: 85vh;
     background: lightgray;
  }
 .prev{
-    left: 30%;
+    left: 5%;
     top: 50%;
 }
 .next{
-    right: 30%;
+    right: 5%;
     top: 50%;
 }
 

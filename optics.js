@@ -1,56 +1,83 @@
-const track = document.querySelector('.model-track');
-const slides = document.querySelectorAll('.model-con');
-const totalSlidesNumber = slides.length;
-const prevBtn=document.querySelector(".prev")
-const nextBtn=document.querySelector(".next")
-const dropdownShow=document.querySelectorAll(".dropdown-show")
-const dropdown=document.querySelector(".dropdown")
 
-// clone first slide
-const cloneSlide = slides[0].cloneNode(true);  
-track.appendChild(cloneSlide);
 
-let index = 0;
+
+const track = document.querySelector(".model-track");
+const slides = document.querySelectorAll(".model-con");
+const totalSlides = slides.length;
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
+
+
+for (let i = 0; i < 3; i++) {
+  const firstClone = slides[i].cloneNode(true);
+
+  track.appendChild(firstClone);
+}
+
+let index=0
+
 const showNextSlide = () => {
-   
-    track.style.transition = 'transform 0.5s ease';
-    track.style.transform = `translateX(-${index * 25}vw)`; // match width
-
-    if (index === totalSlidesNumber) {
-        setTimeout(() => {
-            track.style.transition = 'none';
-            track.style.transform = 'translateX(0)';
-            index = 0;
-        }, 500);
+  track.style.transition = 'transform 0.5s ease';
+  track.style.transform = `translateX(-${index * 27}vw)`;
+  if (index === totalSlidesNumber) 
+  { 
+    setTimeout(() => { 
+      track.style.transition = 'none'; 
+    track.style.transform = 'translateX(0)';
+     index = 0; }, 500); 
+    
     }
 };
 
-const autoSlider=setInterval(()=>{
-    index++;
-    showNextSlide()
-}, 3000)
 
 
+// // Clone first 3 and last 3
+// for(let i = 0; i < 3; i++) {
+//   const firstClone = slides[i].cloneNode(true);
+//   const lastClone = slides[totalSlides - 1 - i].cloneNode(true);
+//   track.appendChild(firstClone);
+//   track.insertBefore(lastClone, track.firstChild);
+// }
 
-nextBtn.addEventListener("click",()=>{
-  clearInterval(autoSlider)
-  index++;
-  showNextSlide();
-})
+// // Update slides after cloning
+// const allSlides = document.querySelectorAll(".model-con");
+// let index = 3; // start at first real slide
+// const slideWidth = allSlides[0].offsetWidth;
 
-prevBtn.addEventListener("click",()=>{
-    clearInterval(autoSlider)
-    index--;
-    if(index < 0){
-        index=totalSlidesNumber-1;
-        track.style.transition = 'none';
-        track.style.transform = `translateX(-${index * 25}vw)`;
-    }
-    showNextSlide()
-})
+// // Initial position
+// track.style.transform = `translateX(-${index * slideWidth}px)`;
 
-for(let i=0 ; i < dropdownShow.length ; i++){
-dropdownShow[i].addEventListener("mouseenter", () => {
+// // Function to move slide
+// function moveSlide() {
+//   track.style.transition = "transform 0.5s ease";
+//   track.style.transform = `translateX(-${index * slideWidth}px)`;
+
+//   track.addEventListener(
+//     "transitionend",
+//     () => {
+//       if (index >= totalSlides + 3) {
+//         track.style.transition = "none";
+//         index = 3; // reset to real first
+//         track.style.transform = `translateX(-${index * slideWidth}px)`;
+//       } else if (index < 3) {
+//         track.style.transition = "none";
+//         index = totalSlides + 2; // reset to real last
+//         track.style.transform = `translateX(-${index * slideWidth}px)`;
+//       }
+//     },
+//     { once: true }
+//   );
+// }
+
+
+const dropdownShow=document.querySelectorAll(".dropdown-show");
+const dropdown=document.querySelector(".dropdown");
+const aboutDropdown=document.querySelector(".about-drop");
+const aboutMenu=document.querySelector('.about')
+ console.log(dropdownShow)
+
+for (let i = 0; i < dropdownShow.length; i++) {
+  dropdownShow[i].addEventListener("mouseenter", () => {
     // dropdown.style.visibility = "visible";
     dropdown.style.transform = "scale(1)";
 
@@ -63,15 +90,38 @@ dropdownShow[i].addEventListener("mouseenter", () => {
 }
 
 dropdown.addEventListener("mouseenter", () => {
-    // dropdown.style.visibility = "visible";
-    dropdown.style.transform = "scale(1)";
+  // dropdown.style.visibility = "visible";
+  dropdown.style.transform = "scale(1)";
 
-  });
-  dropdown.addEventListener("mouseleave", () => {
-    // dropdown.style.visibility = "hidden";
-    dropdown.style.transform = "scale(0)";
+});
+dropdown.addEventListener("mouseleave", () => {
+  // dropdown.style.visibility = "hidden";
+  dropdown.style.transform = "scale(0)";
 
-  });
+});
+
+aboutMenu.addEventListener("mouseenter", () => {
+  // aaboutMenu.style.visibility = "visible";
+  aboutDropdown.style.transform = "scale(1)";
+
+});
+aboutMenu.addEventListener("mouseleave", () => {
+  // aboutDropdown.style.visibility = "hidden";
+  aboutDropdown.style.transform = "scale(0)";
+
+});
+
+
+aboutDropdown.addEventListener("mouseenter", () => {
+  // aaboutMenu.style.visibility = "visible";
+  aboutDropdown.style.transform = "scale(1)";
+
+});
+aboutDropdown.addEventListener("mouseleave", () => {
+  // aboutDropdown.style.visibility = "hidden";
+  aboutDropdown.style.transform = "scale(0)";
+
+});
 
 // const menProductShow=()=>{
 // menProduct.style.display="block";
@@ -91,11 +141,11 @@ dropdown.addEventListener("mouseenter", () => {
 
 //     }
 
-    const productShow=(type,element)=>{
-document.querySelector('.tab.active').classList.remove('active')
-element.classList.add('active');
+const productShow = (type, element) => {
+  document.querySelector('.tab.active').classList.remove('active')
+  element.classList.add('active');
 
 
-document.querySelector('.product-list.active').classList.remove('active')
-document.querySelector('.product-list.' + type).classList.add('active')
-    }
+  document.querySelector('.product-list.active').classList.remove('active')
+  document.querySelector('.product-list.' + type).classList.add('active')
+}

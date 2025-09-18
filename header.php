@@ -21,7 +21,7 @@
 <div class="header1">
     
     <div class="container flex">
-        <p>JUST DROPPED - BE THE FIRST TO OWN IT!</p>
+        <p>Just Droppped - Be The First To Own It!</p>
     </div>
 </div>
 <div class="header2">
@@ -44,6 +44,12 @@
     <li class="brand-item"><a href="#" rel="noopener">Akoni</a></li>
     </div>
     </div>
+    <div class="about-drop">
+      <li class=""><a href="#" rel="noopener">Contact us</a></li>
+    <li class=""><a href="#" rel="noopener">Gallery</a></li>
+    <li class=""><a href="#" rel="noopener">Our Boutiques</a></li>
+    
+    </div>
    <div class="navbar flex">
    <h1><a href="/"><img src="./images/logo.jpeg" alt="" ></a></h1>
     <nav class="menu_con">
@@ -51,7 +57,7 @@
         <a href="about.php" class="dropdown-show">Men</a>
         <a href="shop.php" class="dropdown-show">Women</a>
         <a href="contact.php" class="dropdown-show">Brands</a>
-        <a href="orders.php">About us</a>
+        <a href="orders.php" class="about">About us</a>
 
 </nav>
     <div class="icons">
