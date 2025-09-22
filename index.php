@@ -133,7 +133,7 @@
 
                      </div>
                      <div class="product">
-                         <img src="./images/g1.jpg" alt="">
+                         <img src="./images/g4.webp" alt="">
                          <p class="name">PRADA</p>
                          <p class="model">17WS 1AB/5S0 49</p>
                          <p class="price">₹ 36,290.00 INR</p>
@@ -201,7 +201,7 @@
 
                      </div>
                      <div class="product">
-                         <img src="./images/g1.jpg" alt="">
+                         <img src="./images/g4.webp" alt="">
                          <p class="name">PRADA</p>
                          <p class="model">17WS 1AB/5S0 49</p>
                          <p class="price">₹ 36,290.00 INR</p>
@@ -238,7 +238,7 @@
              </div>
 
              <div class="content slide">
-                 <img src="./images/g1.jpg" alt="">
+                 <img src="./images/g4.webp" alt="">
                  <div class="details">
                      <p class="name">CELINE</p>
                      <p class="model">TRIOMPHE 40235U 30N 54</p>
@@ -270,7 +270,7 @@
 
          <div class="product-con">
              <div class="product">
-                 <img src="./images/g1.jpg" alt="">
+                 <img src="./images/g4.webp" alt="">
                  <p class="name">PRADA</p>
                  <p class="model">17WS 1AB/5S0 49</p>
                  <p class="price">₹ 36,290.00 INR</p>
@@ -321,7 +321,7 @@
 
              </div>
              <div class="product">
-                 <img src="./images/g1.jpg" alt="">
+                 <img src="./images/g4.webp" alt="">
                  <p class="name">PRADA</p>
                  <p class="model">17WS 1AB/5S0 49</p>
                  <p class="price">₹ 36,290.00 INR</p>
@@ -378,7 +378,7 @@
 
          <div class="product-con">
              <div class="product">
-                 <img src="./images/g1.jpg" alt="">
+                 <img src="./images/g4.webp" alt="">
                  <p class="name">PRADA</p>
                  <p class="model">17WS 1AB/5S0 49</p>
                  <p class="price">₹ 36,290.00 INR</p>
@@ -429,7 +429,7 @@
 
              </div>
              <div class="product">
-                 <img src="./images/g1.jpg" alt="">
+                 <img src="./images/g4.webp" alt="">
                  <p class="name">PRADA</p>
                  <p class="model">17WS 1AB/5S0 49</p>
                  <p class="price">₹ 36,290.00 INR</p>
@@ -450,7 +450,7 @@
 
          <div class="product-con">
              <div class="product">
-                 <img src="./images/g1.jpg" alt="">
+                 <img src="./images/g4.webp" alt="">
                  <p class="name">PRADA</p>
                  <p class="model">17WS 1AB/5S0 49</p>
                  <p class="price">₹ 36,290.00 INR</p>
@@ -501,7 +501,7 @@
 
              </div>
              <div class="product">
-                 <img src="./images/g1.jpg" alt="">
+                 <img src="./images/g4.webp" alt="">
                  <p class="name">PRADA</p>
                  <p class="model">17WS 1AB/5S0 49</p>
                  <p class="price">₹ 36,290.00 INR</p>
