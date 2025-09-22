@@ -6,20 +6,26 @@ const slides = document.querySelectorAll(".model-con");
 const totalSlides = slides.length;
 const nextBtn = document.querySelector(".next");
 const prevBtn = document.querySelector(".prev");
+const logoTrack = document.querySelector(".logo-track");
+
+
 
 
 for (let i = 0; i < 3; i++) {
   const firstClone = slides[i].cloneNode(true);
-
+  
   track.appendChild(firstClone);
 }
 
+console.log(slides)
 let index=0
 
 const showNextSlide = () => {
+  index++;
+  const cardWidth=slides[0].offsetWidth;
   track.style.transition = 'transform 0.5s ease';
-  track.style.transform = `translateX(-${index * 27}vw)`;
-  if (index === totalSlidesNumber) 
+  track.style.transform = `translateX(-${index * cardWidth}px)`;
+  if (index === totalSlides) 
   { 
     setTimeout(() => { 
       track.style.transition = 'none'; 
@@ -29,45 +35,7 @@ const showNextSlide = () => {
     }
 };
 
-
-
-// // Clone first 3 and last 3
-// for(let i = 0; i < 3; i++) {
-//   const firstClone = slides[i].cloneNode(true);
-//   const lastClone = slides[totalSlides - 1 - i].cloneNode(true);
-//   track.appendChild(firstClone);
-//   track.insertBefore(lastClone, track.firstChild);
-// }
-
-// // Update slides after cloning
-// const allSlides = document.querySelectorAll(".model-con");
-// let index = 3; // start at first real slide
-// const slideWidth = allSlides[0].offsetWidth;
-
-// // Initial position
-// track.style.transform = `translateX(-${index * slideWidth}px)`;
-
-// // Function to move slide
-// function moveSlide() {
-//   track.style.transition = "transform 0.5s ease";
-//   track.style.transform = `translateX(-${index * slideWidth}px)`;
-
-//   track.addEventListener(
-//     "transitionend",
-//     () => {
-//       if (index >= totalSlides + 3) {
-//         track.style.transition = "none";
-//         index = 3; // reset to real first
-//         track.style.transform = `translateX(-${index * slideWidth}px)`;
-//       } else if (index < 3) {
-//         track.style.transition = "none";
-//         index = totalSlides + 2; // reset to real last
-//         track.style.transform = `translateX(-${index * slideWidth}px)`;
-//       }
-//     },
-//     { once: true }
-//   );
-// }
+setInterval(showNextSlide,3000)
 
 
 const dropdownShow=document.querySelectorAll(".dropdown-show");

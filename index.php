@@ -50,16 +50,18 @@
      <!-- <link rel="stylesheet" type="text/css" href="admin.css"> -->
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
  </head>
 
  <body>
      <?php include 'header.php'; ?>
      <div class="carousel hero">
          <div class="slides bg-slate-700 h-80 w-screen text-2xl">
-             <div class="slide"><img src="./images/Website Banner (1).png" alt=""></div>
-             <div class="slide"><img src="./images/Website Banner (2).png" alt=""></div>
-             <div class="slide"><img src="./images/Website Banner (3).png" alt=""></div>
+             <div class="slide"><img src="./images/1.png" alt=""></div>
+             <div class="slide"><img src="./images/2.png" alt=""></div>
+             <div class="slide"><img src="./images/3.png" alt=""></div>
+             <div class="slide"><img src="./images/4.png" alt=""></div>
+             <div class="slide"><img src="./images/5.png" alt=""></div>
 
 
          </div>
@@ -215,126 +217,126 @@
          </div>
      </section>
 
-     <hr >
+     <hr>
 
      <section class="week-sec carousel">
-        <div class="header">
-            <h5>its fresh, it's fire ....it's the</h5>
-            <h4>drop you can't miss</h4>
-            </div>
-            <div class="slid-show slides">
-            <div class="content slide">
-                <img src="./images/w1.webp" alt="">
-                <div class="details">
-                    <p class="name">CELINE</p>
-                    <p class="model">TRIOMPHE 40235U 30N 54</p>
-                    <p class="price">₹ 63,200.00 INR</p>
+         <div class="header">
+             <h5>its fresh, it's fire ....it's the</h5>
+             <h4>drop you can't miss</h4>
+         </div>
+         <div class="slid-show slides">
+             <div class="content slide">
+                 <img src="./images/w1.webp" alt="">
+                 <div class="details">
+                     <p class="name">CELINE</p>
+                     <p class="model">TRIOMPHE 40235U 30N 54</p>
+                     <p class="price">₹ 63,200.00 INR</p>
 
-                    <a href="" class="link">view product details</a>
+                     <a href="" class="link">view product details</a>
 
-                </div>
-            </div>
+                 </div>
+             </div>
 
-            <div class="content slide">
-                <img src="./images/g1.jpg" alt="">
-                <div class="details">
-                    <p class="name">CELINE</p>
-                    <p class="model">TRIOMPHE 40235U 30N 54</p>
-                    <p class="price">₹ 63,200.00 INR</p>
+             <div class="content slide">
+                 <img src="./images/g1.jpg" alt="">
+                 <div class="details">
+                     <p class="name">CELINE</p>
+                     <p class="model">TRIOMPHE 40235U 30N 54</p>
+                     <p class="price">₹ 63,200.00 INR</p>
 
-                    <a href="" class="link">view product details</a>
+                     <a href="" class="link">view product details</a>
 
-                </div>
-            </div>
+                 </div>
+             </div>
 
-            <div class="content slide">
-                <img src="./images/g2.webp" alt="">
-                <div class="details">
-                    <p class="name">CELINE</p>
-                    <p class="model">TRIOMPHE 40235U 30N 54</p>
-                    <p class="price">₹ 63,200.00 INR</p>
+             <div class="content slide">
+                 <img src="./images/g2.webp" alt="">
+                 <div class="details">
+                     <p class="name">CELINE</p>
+                     <p class="model">TRIOMPHE 40235U 30N 54</p>
+                     <p class="price">₹ 63,200.00 INR</p>
 
-                    <a href="" class="link">view product details</a>
+                     <a href="" class="link">view product details</a>
 
-                </div>
-            </div>
-            </div>
+                 </div>
+             </div>
+         </div>
      </section>
 
 
      <hr>
      <section class="bestseller">
-        <h2>Bestseller</h2>
+         <h2>Bestseller</h2>
 
-        <div class="product-con">
-                     <div class="product">
-                         <img src="./images/g1.jpg" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+         <div class="product-con">
+             <div class="product">
+                 <img src="./images/g1.jpg" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
+             </div>
 
 
-                     <div class="product">
-                         <img src="./images/g2.webp" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+             <div class="product">
+                 <img src="./images/g2.webp" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
-                     <div class="product">
-                         <img src="./images/g3.webp" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+             </div>
+             <div class="product">
+                 <img src="./images/g3.webp" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
-                     <div class="product">
-                         <img src="./images/g4.webp" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+             </div>
+             <div class="product">
+                 <img src="./images/g4.webp" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
-                     <div class="product">
-                         <img src="./images/g5.webp" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+             </div>
+             <div class="product">
+                 <img src="./images/g5.webp" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
-                     <div class="product">
-                         <img src="./images/g6.webp" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+             </div>
+             <div class="product">
+                 <img src="./images/g6.webp" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
-                     <div class="product">
-                         <img src="./images/g4.webp" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+             </div>
+             <div class="product">
+                 <img src="./images/g4.webp" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
-                     <div class="product">
-                         <img src="./images/g1.jpg" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+             </div>
+             <div class="product">
+                 <img src="./images/g1.jpg" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
+             </div>
 
-                 </div>
+         </div>
      </section>
 
      <!-- <hr> -->
 
      <section class="apointment">
-<!-- <h4>expert care trendy wear </h4> -->
-<button class="btn visit-btn">plan your visit</button>
-<!-- <div class="form">
+         <!-- <h4>expert care trendy wear </h4> -->
+         <button class="btn visit-btn">plan your visit</button>
+         <!-- <div class="form">
     <form action="">
         <input type="text" name="" id="" placeholder="Please Enter Name ">
         <input type="number" name="" id="" placeholder="Please Enter Mobile Number">
@@ -348,21 +350,22 @@
      </section>
 
      <section class="model-section">
-        <h5>step into style</h5>
-        <h4>shop the drop</h4>
-        <button class="carousel-control prev" ><i class="fa-solid fa-chevron-left"></i></button>
-<button class="carousel-control next" ><i class="fa-solid fa-chevron-right"></i></button>
-        <div class="model-img">
-            
-          
-  <div class="model-track"> <!-- this is the moving container -->
-    <div class="model-con"><img src="./images/model (1).png" alt=""><button class="btn">view product1</button></div>
-    <div class="model-con"><img src="./images/model (2).png" alt=""><button class="btn">view product</button></div>
-    <div class="model-con"><img src="./images/model (3).png" alt=""><button class="btn">view product</button></div>
-    <div class="model-con"><img src="./images/model (4).png" alt=""><button class="btn">view product</button></div>
+         <h5>step into style</h5>
+         <h4>shop the drop</h4>
+         <button class="carousel-control prev"><i class="fa-solid fa-chevron-left"></i></button>
+         <button class="carousel-control next"><i class="fa-solid fa-chevron-right"></i></button>
+         <div class="model-img">
 
-  </div>
-</div>
+
+             <div class="model-track"> <!-- this is the moving container -->
+                 <div class="model-con"><img src="./images/model (4).png" alt=""><button class="btn">view product</button></div>
+                 <div class="model-con"><img src="./images/model (3).png" alt=""><button class="btn">view product</button></div>
+                 <div class="model-con"><img src="./images/model (2).png" alt=""><button class="btn">view product</button></div>
+
+                 <div class="model-con"><img src="./images/model (1).png" alt=""><button class="btn">view product</button></div>
+
+             </div>
+         </div>
 
      </section>
 
@@ -370,147 +373,189 @@
 
 
      <section class="gucci bestseller">
-     <h5>the viube of now</h5>
-     <h4>gucci</h4>
+         <h5>the viube of now</h5>
+         <h4>gucci</h4>
 
-        <div class="product-con">
-                     <div class="product">
-                         <img src="./images/g1.jpg" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+         <div class="product-con">
+             <div class="product">
+                 <img src="./images/g1.jpg" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
+             </div>
 
 
-                     <div class="product">
-                         <img src="./images/g2.webp" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+             <div class="product">
+                 <img src="./images/g2.webp" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
-                     <div class="product">
-                         <img src="./images/g3.webp" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+             </div>
+             <div class="product">
+                 <img src="./images/g3.webp" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
-                     <div class="product">
-                         <img src="./images/g4.webp" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+             </div>
+             <div class="product">
+                 <img src="./images/g4.webp" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
-                     <div class="product">
-                         <img src="./images/g5.webp" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+             </div>
+             <div class="product">
+                 <img src="./images/g5.webp" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
-                     <div class="product">
-                         <img src="./images/g6.webp" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+             </div>
+             <div class="product">
+                 <img src="./images/g6.webp" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
-                     <div class="product">
-                         <img src="./images/g4.webp" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+             </div>
+             <div class="product">
+                 <img src="./images/g4.webp" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
-                     <div class="product">
-                         <img src="./images/g1.jpg" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+             </div>
+             <div class="product">
+                 <img src="./images/g1.jpg" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
+             </div>
 
-                 </div>
+         </div>
      </section>
 
 
-     
+
      <hr>
 
 
      <section class="akoni bestseller">
-     <h5>explore the collection</h5>
-     <h4>akoni</h4>
+         <h5>explore the collection</h5>
+         <h4>akoni</h4>
 
-        <div class="product-con">
-                     <div class="product">
-                         <img src="./images/g1.jpg" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+         <div class="product-con">
+             <div class="product">
+                 <img src="./images/g1.jpg" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
+             </div>
 
 
-                     <div class="product">
-                         <img src="./images/g2.webp" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+             <div class="product">
+                 <img src="./images/g2.webp" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
-                     <div class="product">
-                         <img src="./images/g3.webp" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+             </div>
+             <div class="product">
+                 <img src="./images/g3.webp" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
-                     <div class="product">
-                         <img src="./images/g4.webp" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+             </div>
+             <div class="product">
+                 <img src="./images/g4.webp" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
-                     <div class="product">
-                         <img src="./images/g5.webp" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+             </div>
+             <div class="product">
+                 <img src="./images/g5.webp" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
-                     <div class="product">
-                         <img src="./images/g6.webp" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+             </div>
+             <div class="product">
+                 <img src="./images/g6.webp" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
-                     <div class="product">
-                         <img src="./images/g4.webp" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+             </div>
+             <div class="product">
+                 <img src="./images/g4.webp" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
-                     <div class="product">
-                         <img src="./images/g1.jpg" alt="">
-                         <p class="name">PRADA</p>
-                         <p class="model">17WS 1AB/5S0 49</p>
-                         <p class="price">₹ 36,290.00 INR</p>
+             </div>
+             <div class="product">
+                 <img src="./images/g1.jpg" alt="">
+                 <p class="name">PRADA</p>
+                 <p class="model">17WS 1AB/5S0 49</p>
+                 <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
+             </div>
 
-                 </div>
+         </div>
+     </section>
+
+
+     <hr>
+     <section class="logo-caraousel">
+
+
+         <h4>our brands</h4>
+         <div class="logo-slider" aria-label="Partner logos">
+             <div class="logo-track">
+
+                 <div class="slide"><img src="./images/brand (1).png" /></div>
+                 <div class="slide"><img src="./images/brand (2).png" /></div>
+                 <div class="slide"><img src="./images/brand (3).png" /></div>
+                 <div class="slide"><img src="./images/brand (4).png" /></div>
+                 <div class="slide"><img src="./images/brand (5).png" /></div>
+                 <div class="slide"><img src="./images/brand (6).png" /></div>
+                 <div class="slide"><img src="./images/brand (7).png" /></div>
+                 <div class="slide"><img src="./images/brand (8).png" /></div>
+                 <div class="slide"><img src="./images/brand (9).png" /></div>
+                 <div class="slide"><img src="./images/brand (10).png" /></div>
+                 <div class="slide"><img src="./images/brand (11).png" /></div>
+                 <div class="slide"><img src="./images/brand (12).png" /></div>
+             </div>
+             <div  aria-hidden class="logo-track">
+
+                 <div class="slide"><img src="./images/brand (1).png" /></div>
+                 <div class="slide"><img src="./images/brand (2).png" /></div>
+                 <div class="slide"><img src="./images/brand (3).png" /></div>
+                 <div class="slide"><img src="./images/brand (4).png" /></div>
+                 <div class="slide"><img src="./images/brand (5).png" /></div>
+                 <div class="slide"><img src="./images/brand (6).png" /></div>
+                 <div class="slide"><img src="./images/brand (7).png" /></div>
+                 <div class="slide"><img src="./images/brand (8).png" /></div>
+                 <div class="slide"><img src="./images/brand (9).png" /></div>
+                 <div class="slide"><img src="./images/brand (10).png" /></div>
+                 <div class="slide"><img src="./images/brand (11).png" /></div>
+                 <div class="slide"><img src="./images/brand (12).png" /></div>
+
+
+             </div>
+         </div>
      </section>
      <?php include 'footer.php' ?>
 
 
-    
+
      <script src="optics.js"></script>
 
      <!-- <script src="script.js"></script> -->
