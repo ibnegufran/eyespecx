@@ -87,7 +87,7 @@
                          <p class="model">17WS 1AB/5S0 49</p>
                          <p class="price">₹ 36,290.00 INR</p>
 
-                     </div>
+    </div>
 
 
                      <div class="product">
