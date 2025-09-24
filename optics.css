@@ -42,6 +42,10 @@
     /* font-family: "Nunito Sans", sans-serif; */
   
 }
+body{
+    min-width: 100vw;
+    overflow-x: hidden;
+}
 html{
     overflow-x: hidden;
     font-size: 62.5%;
@@ -259,17 +263,20 @@ position: relative;
     -webkit-backdrop-filter: blur(10px);  /* Safari support */
     border: 1px solid rgba(77, 75, 75, 0.3); /* light border */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        position: absolute;
+     position: absolute;
     padding:2rem 4rem;
     top: 100%;
     left: 0;
     width: 100%;
     /* height: 0; */
-    z-index: 10;
+    z-index: 20;
     transform: scale(0);
 /* visibility: hidden; */
 transition:transform .5s ease-in-out;
 transform-origin: top;
+}
+.cut{
+   display: none;
 }
 .dropdown:hover{
     transform: scale(1);
@@ -314,7 +321,7 @@ transform-origin: top;
     right: 25%;
     /* width: 100%; */
     /* height: 0; */
-    z-index: 10;
+    z-index: 20;
     transform: scale(0);
 /* visibility: hidden; */
 transition:transform .5s ease-in-out;
@@ -369,13 +376,18 @@ height: 85vh;
     inset: 0;
    
    opacity: 0;
-  animation: zoomEffect 20s infinite;
+  animation: zoomEffect 15s infinite;
+}
+.carousel.hero .slides .slide{
+  animation: zoomEffect 25s infinite;
+
 }
 .hero.carousel .slides .slide img{
 
    width: 100%;
    height: 100%;
-   /* object-fit: cover; */
+   /* height: 80vh; */
+   object-fit: fill;
   
  
 
@@ -709,6 +721,7 @@ height: 85vh;
   .model-con {
    flex: 0 0 calc(100%/3);
    padding: 0 1vw;
+   position: inherit;
    
   }
   
@@ -728,9 +741,10 @@ height: 85vh;
  .carousel-control{
     position: absolute; 
     background: white;
+    z-index: 20;
  }
 
- .carousel-control i{
+ .carousel-control {
     color: var(--color-text-dark);
     font-size: 2rem;
     background-color: rgb(241, 238, 238);
@@ -809,11 +823,7 @@ will-change: transform;
   }
 
   /* responsive tweak */
-  @media (max-width: 480px){
-    :root { --logo-height: 40px; --gap: 12px; --speed: 18s; }
-  }
-
-
+ 
 
 
 
@@ -866,3 +876,93 @@ will-change: transform;
     padding-top: 3rem;
 }
   
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width:768px){
+    :root { --logo-height: 50px; --gap: 12px; --speed: 18s; }
+    #menu-btn{
+        display: inline-block;
+    }
+    .header2 .navbar .menu_con.nav-active{
+        position: absolute;
+ top: 99%;
+     }
+    .header2 .navbar{
+        max-width: 1200px;
+        justify-content: space-between;
+        padding:1rem 2rem;
+        /* background-color: #ce1d1d; */
+    }
+    .header2 .navbar .menu_con{
+        z-index: 10;
+      position: absolute;
+      top: -800%;
+      left: 0%;
+      right: 0%;
+      /* background-color: rgb(149, 33, 33); */
+      border-bottom: var(--border);
+
+transition: all .8s ease-in;
+      border-top: var(--border);
+      background-color: white;
+    }
+    .header2 .navbar .menu_con.nav-active{
+       position: absolute;
+top: 99%;
+    }
+    .dropdown{
+        padding: 1rem 2rem;
+    }
+   
+    .menu_con a{
+      display: block;
+      padding: 1.5rem 1rem;
+      margin: 2.5rem;
+      margin-left: 3rem;
+      font-size: 1.5rem;
+
+    }
+
+    .icons{
+        display: flex;
+        column-gap: 1vw;
+    }
+   .cut{
+        display: block;
+        position: fixed;
+        font-size: 2rem;
+        top: 5%;
+        right: 10%;
+        color: white;
+    }
+    .about-drop{
+     height: 100vh;
+     width: 100vw;
+     left: 0;
+    }
+    
+.week-sec .content img{
+    width: 100%;
+   
+}
+.carousel .slides{
+    height: 90vh;
+    
+    
+}
+.apointment{
+    /* background-size: cover; */
+}
+.model-con {
+    flex: 0 0 calc(100%);
+ 
+    
+   }
+   
+  }
+
+

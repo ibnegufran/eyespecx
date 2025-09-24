@@ -10,6 +10,12 @@ const logoTrack = document.querySelector(".logo-track");
 
 
 
+let menuBtn=document.querySelector("#menu-btn");
+menuBtn.addEventListener("click",()=>{
+    document.querySelector(".menu_con").classList.toggle("nav-active");
+  
+
+})
 
 for (let i = 0; i < 3; i++) {
   const firstClone = slides[i].cloneNode(true);
@@ -21,7 +27,7 @@ console.log(slides)
 let index=0
 
 const showNextSlide = () => {
-  index++;
+  
   const cardWidth=slides[0].offsetWidth;
   track.style.transition = 'transform 0.5s ease';
   track.style.transform = `translateX(-${index * cardWidth}px)`;
@@ -35,13 +41,38 @@ const showNextSlide = () => {
     }
 };
 
-setInterval(showNextSlide,3000)
+
+
+nextBtn.addEventListener("click",()=>{
+  index++;
+  showNextSlide()
+  clearInterval(autoSlider)
+})
+
+prevBtn.addEventListener("click",()=>{
+  index--;
+
+  if(index < 0){
+index=slides.length-1;
+
+  }
+  showNextSlide()
+  clearInterval(autoSlider)
+})
+
+
+const autoSlider=setInterval(()=>{
+  index++;
+  showNextSlide()
+},3000)
 
 
 const dropdownShow=document.querySelectorAll(".dropdown-show");
 const dropdown=document.querySelector(".dropdown");
 const aboutDropdown=document.querySelector(".about-drop");
 const aboutMenu=document.querySelector('.about')
+const cutIcon=document.querySelectorAll('.cut')
+
  console.log(dropdownShow)
 
 for (let i = 0; i < dropdownShow.length; i++) {
@@ -55,7 +86,24 @@ for (let i = 0; i < dropdownShow.length; i++) {
     dropdown.style.transform = "scale(0)";
 
   });
+  dropdownShow[i].addEventListener("click", () => {
+    // dropdown.style.visibility = "visible";
+    dropdown.style.transform = "scale(1)";
+
+  });
 }
+
+for (let i = 0; i < cutIcon.length; i++) {
+  cutIcon[i].addEventListener("click", () => {
+    // dropdown.style.visibility = "hidden";
+    aboutDropdown.style.transform = "scale(0)";
+    dropdown.style.transform = "scale(0)";
+
+  
+  });
+}
+
+
 
 dropdown.addEventListener("mouseenter", () => {
   // dropdown.style.visibility = "visible";

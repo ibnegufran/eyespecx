@@ -26,6 +26,7 @@
 </div>
 <div class="header2">
 <div class="dropdown">
+    <div class="fa fa-times cut"></div>
     <div class="brands">
       <li class="brand-item"><a href="#" rel="noopener">Rayban</a></li>
     <li class="brand-item"><a href="#" rel="noopener">Vogue</a></li>
@@ -45,25 +46,26 @@
     </div>
     </div>
     <div class="about-drop">
+    <div class="fa fa-times cut"></div>
       <li class=""><a href="#" rel="noopener">Contact us</a></li>
     <li class=""><a href="#" rel="noopener">Gallery</a></li>
     <li class=""><a href="#" rel="noopener">Our Boutiques</a></li>
     
     </div>
    <div class="navbar flex">
-   <h1><a href="/"><img src="./images/logo.jpeg" alt="" ></a></h1>
+   <h1><a href="/"><img src="./images/logo2.png" alt="" ></a></h1>
     <nav class="menu_con">
         <a href="home.php" class="">home</a>
-        <a href="about.php" class="dropdown-show">Men</a>
-        <a href="shop.php" class="dropdown-show">Women</a>
-        <a href="contact.php" class="dropdown-show">Brands</a>
-        <a href="orders.php" class="about">About us</a>
+        <a  class="dropdown-show">Men</a>
+        <a  class="dropdown-show">Women</a>
+        <a  class="dropdown-show">Brands</a>
+        <a  class="about">About us</a>
 
 </nav>
     <div class="icons">
-        <!-- <div id="menu-btn" class="fas fa-bars"></div> -->
+        <a id="menu-btn" class="fas fa-bars"></a>
         <a href="search.php" class="fas fa-search"></a>
-        <div id="user-btn" class="fas fa-cart-shopping"></div>
+        <a id="user-btn" class="fas fa-cart-shopping"></a>
        
     </div>
 
