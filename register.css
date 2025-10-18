@@ -14,7 +14,7 @@
     /* States */
     --color-hover: #EAEAEA;        /* Light hover for contrast */
     --color-button-hover: #A67C52; /* Bronze for button hover */
-   --border:.1rem solid var(--black);
+   --border:.1rem solid lightgray;
    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
 }
 
@@ -61,14 +61,19 @@ html{
 }
 .container{
     
-     padding: 1.5rem 4rem;
+     padding: 2.5rem 4rem;
    width: 600px;
     background-color:white;
     flex-direction: column;
     justify-content: space-evenly;
     border-radius: 2rem;
+    border: 1px solid lightgray;
     box-shadow: var(--box-shadow);
     align-items: center;
+}
+#btn{
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
 }
 form{
   width: 100%;
@@ -81,12 +86,12 @@ form{
     font-size: 1.5rem;
     border-radius: 2rem;
     padding-left: 1.5rem;
-    margin-top: 1.2rem;
+    margin-top: 2rem;
     text-transform: none;
     
 }
 #btn{
-    background-color: var(--purple);
+    background-color: var(--color-text-dark);
     color: white;
     font-size: 2rem;
     font-weight: bold;

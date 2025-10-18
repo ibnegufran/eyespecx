@@ -1,52 +1,20 @@
 <?php
 
-include 'connect.php';
 session_start();
 if(isset($_POST['submit'])){
-        $email=$_POST['email'];
-    $pass=$_POST['password'];
+    $email = $_POST['email'];
+    $pass = $_POST['password'];
 
-
-    $select_users=mysqli_query($con,"Select  * from `register` Where email ='$email' AND password='$pass'");
-
-    if(mysqli_num_rows($select_users)>0){
-        $row=mysqli_fetch_assoc($select_users);
-        // mtlb agar bandah registered hai to jo email aur pass. dala hai uski row ko fetch karlo mtlab sari info.
-        if($row['user_type'] == 'admin'){
-
-            if(($row['email'] == 'abdurrahman@gmail.com') && ($row['password'] == 'abdurrahman123')){
-            $_SESSION['admin_name']=$row['name'];
-            $_SESSION['admin_email']=$row['email'];
-            $_SESSION['admin_id']=$row['id'];
-            header('location:admin_page.php');
-            }else{
-        $message[]='unauthorized access';
-
-            }
-
-        }elseif($row['user_type'] =='user'){
-            $_SESSION['user_name']=$row['name'];
-            $_SESSION['user_email']=$row['email'];
-            $_SESSION['user_id']=$row['id'];
-            header('location:home.php');
-
-        }
-
-    }else{
-        
-        $message[]='incorrect email and password';
+    if(($email == 'abdurrahman@gmail.com') && ($pass == 'abdurrahman123')){
+        $_SESSION['admin_name'] = 'Abdur Rahman';
+        $_SESSION['admin_email'] = $email;
+        $_SESSION['admin_id'] = 1;
+        header('location:admin_page.php');
+        exit;
+    } else {
+        $message[] = 'unauthorized access';
     }
-    
-    
-    
-    
-    
-}
-
-
-
-
-
+} 
 ?>
 
 
@@ -97,11 +65,11 @@ if(isset($_POST['submit'])){
         <h2>login now!</h2>
         <form method="post" action="">
                         <input type="email" placeholder="pleace enter your email" name="email">
-            <input type="password" placeholder="pleace enter your password " name=" password">
+            <input type="password" placeholder="pleace enter your password " name="password">
             
             <input type="submit" name="submit" id="btn"  value="login">
 
-            <p class="p">don't have accont?    <a href="register.php">register now</a></p>
+          
             
             
             </form>

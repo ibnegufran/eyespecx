@@ -511,6 +511,7 @@ height: 85vh;
     transform: scale(1.1);
     transition:all .5s ease;
     box-shadow:inset(2px ,2px,2px ,lightgray);
+    mix-blend-mode: multiply;
 }
  .product-con .product img{
    height: 35vh;
@@ -879,6 +880,175 @@ will-change: transform;
     padding-top: 3rem;
 }
   
+
+.rightside{
+    margin-left: 20vw;
+    padding: 50px 30px;
+    width: 80vw;
+    min-height: 100vh;
+    background-color: var(--color-background);
+}   
+.sidebar{
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    align-items: start;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    background-color: var(--color-text-dark);
+    padding: 50px 50px ;
+    z-index: 10000;
+}
+.sidebar a{
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    /* text-transform: uppercase; */
+    margin: 1.5rem 0;
+}   
+.sidebar a:hover{
+    color: blue;
+}
+.sidebar h1{
+    font-size: 2.5rem;
+    color: var(--color-primary);
+}
+.dashboard-container{
+    display: flex;
+}
+.box-container{
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 2rem ;
+   /*background-color: red;*/
+   display: grid;
+   grid-template-columns: repeat(auto-fit,25rem);
+   gap: 4rem;
+   align-items: center;
+   justify-content: center;
+}
+.box-container .box{
+    height: 10rem;
+    width: 20rem;
+    border: var(--border);
+    /*float: left;*/
+    /*margin: 2rem;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2.5rem 1.5rem;
+    border-radius: 2px;
+}
+.box h3{
+font-size: 2rem;
+color: var(--purple);
+margin-bottom: 1rem;
+}
+.box p{
+font-size: 1.5rem;
+}
+.rightside h1{
+    font-size: 3rem;
+    color: var(--color-text-dark);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}   
+.brand-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: var(--border);
+    font-size: 1.5rem;
+    text-align: center;
+}
+.brand-table th, .brand-table td{
+    padding: 12px 15px;
+    border: var(--border);
+}
+.rightside h2{
+    font-size: 2.5rem;
+    color: var(--color-text-dark);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.rightside .product-con{
+    row-gap: 5vh;
+}
+.rightside .product-con .product h3{
+    font-size: 1.8rem;
+    margin: 3px 0;
+}
+.rightside .product-con .product p{
+    font-size: 1.4rem;
+    margin: 2px 0;
+}
+.btn-con{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.p-delete-btn{
+    background-color: red;
+    text-align: center;
+    color: white;
+
+}
+.edit-btn{
+    background-color: green;
+    text-align: center;
+
+    color: white;
+}
+
+.p-delete-btn, .edit-btn{
+  /* display: inline-block; */
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    padding: 10px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.add-products .form{
+    box-shadow: var(--box-shadow);
+    border:1px solid lightgray;
+    border-radius: 4px;
+   
+}
+.add-products .form form{
+    align-items:start;
+}
+
+.add-products .form form select{
+    font-size: 1.5rem;
+    padding: 10px;
+    width: 35vw;
+    border: 1px solid rgb(212, 211, 211);
+    border-radius: 4px;
+}
+.add-products .form form label{
+    font-size: 1.5rem;
+    margin-top: 10px;
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width:991px){
     html{
         font-size: 55%;

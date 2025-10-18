@@ -7,39 +7,71 @@ $admin_id=$_SESSION['admin_id'];
 if(!isset($admin_id)){
     header('location:login.php');
 }
-if(isset($_POST['add-product'])){
-    //agar form submit ho gaya tha
-    $name=$_POST['name'];
-    $price=$_POST['price'];
-    $image_name = $_FILES['image']['name'];
-    $image_size = $_FILES['image']['size'];
-    $image_tmp_name = $_FILES['image']['tmp_name'];
-    $image_folder = 'uploaded_img/'.$image_name;
-   
-$select_product_name=mysqli_query($con,"SELECT name FROM `products` WHERE name='$name'")
-or die('query failed');
 
-if(mysqli_num_rows($select_product_name)>0){
-    $message[]='product already exist';
-}else{
-$add_product_query=mysqli_query($con,"INSERT INTO `products`(name,price,image)VALUES('$name','$price','$image_name')")or die('query failed');
-if($add_product_query){
-    if($image_size>2000000){
-        $message[]='too big image size';
-    }else{
-        move_uploaded_file($image_tmp_name,$image_folder);
-        $message=['product inserted successfully'];
-        // $message[]='product inserted successfully';
+ // your database connection file
 
-        
+if (isset($_POST['add-product'])) {
 
+    // --- Basic product details ---
+    $name     = $_POST['model_name'];
+    $price    = $_POST['price'];
+    $category = $_POST['category'];
+    $brand    = $_POST['brand'];
+    $type     = $_POST['type'];
+
+    // --- MAIN IMAGE handling ---
+    $mainImageName = $_FILES['image']['name'];
+    $mainImageTmp  = $_FILES['image']['tmp_name'];
+    $mainImageSize = $_FILES['image']['size'];
+    $mainImagePath = 'uploaded_image/' . $mainImageName;
+
+    // --- ADDITIONAL IMAGES handling ---
+    $additionalPaths = [];
+
+    if (!empty($_FILES['additional_images']['name'][0])) {
+        foreach ($_FILES['additional_images']['tmp_name'] as $key => $tmpName) {
+            $fileName = $_FILES['additional_images']['name'][$key];
+            $fileTmp   = $_FILES['additional_images']['tmp_name'][$key];
+            $filePath  = 'uploaded_image/' . $fileName;
+
+            if (move_uploaded_file($fileTmp, $filePath)) {
+                $additionalPaths[] = $filePath;
+            }
+        }
     }
-}else{
-    $message[]='product inserting failed';
 
+    // Convert all additional image paths into a single text (JSON)
+    $additionalImagesText = json_encode($additionalPaths);
+
+    // --- Validation: product already exists ---
+    $checkQuery = mysqli_query($con, "SELECT name FROM products WHERE name='$name'");
+
+    if (mysqli_num_rows($checkQuery) > 0) {
+        echo "❌ Product already exists.";
+    } else {
+        // --- Save to database ---
+        if ($mainImageSize > 2000000) {
+            echo "❌ Main image too large (max 2MB).";
+        } else {
+            // Move main image first
+            move_uploaded_file($mainImageTmp, $mainImagePath);
+
+            $insertQuery = mysqli_query($con, "
+                INSERT INTO products (name, price, category, brand, type, image_url, additional_images)
+                VALUES ('$name', '$price', '$category', '$brand', '$type', '$mainImagePath', '$additionalImagesText')
+            ");
+
+            if ($insertQuery) {
+                echo "✅ Product inserted successfully!";
+            } else {
+                echo "❌ Error while inserting product.";
+            }
+        }
+    }
 }
-}
-}
+
+
+
 if(isset($_GET['delete'])){
     $del_id=$_GET['delete'];
     $delete_img=mysqli_query($con,"SELECT image FROM `products` WHERE id='$del_id'")or die ('query failed');
@@ -92,7 +124,7 @@ unlink('uploaded_img/'.$update_old_img);
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>admin-page</title>
-        <link rel="stylesheet" type="text/css" href="admin.css">
+        <link rel="stylesheet" type="text/css" href="optics.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 <body>
@@ -113,17 +145,55 @@ unlink('uploaded_img/'.$update_old_img);
         
         
         ?>
+
+         <div class="dashboard-container">
     <?php
-    include 'admin_header.php'
+    include 'admin_sidebar.php' ;
     ?>
-<h1 class="product_heading">shop products</h1>
-    <div class="add-products flex">
-<div class="form flex">
-<h2> products</h2>
-<form action="" method="post" class="flex" enctype="multipart/form-data">
-<input type="text" name="name" id="" placeholder="enter product name" required>
+<section class="rightside">
+   
+<h1 class="product_heading">Add Product</h1>
+<div class="add-products flex">
+<div class="form ">
+
+<form action="" method="post" class="" enctype="multipart/form-data">
+<input type="text" name="model_name" id="" placeholder="Enter product model name" required>
 <input type="number" name="price" id="" placeholder="enter product price" required>
- <input type="file" name="image"  accept=".jpg  ,.jpeg, .png"  id="file" required>
+<select name="category" id="">
+    <option  >Select ctaegory</option>
+    <option value="Men">Men</option>
+    <option value="Women">Women </option>
+
+</select>
+<select name="brand" id="">
+  <option >Select Brand</option>
+  <option value="Rayban">Rayban</option>
+  <option value="Vogue">Vogue</option>
+  <option value="Tommy Hilfiger">Tommy Hilfiger</option>
+  <option value="Oakley">Oakley</option>
+  <option value="Lacoste">Lacoste</option>
+  <option value="Nova">Nova</option>
+  <option value="Velocity">Velocity</option>
+  <option value="CK">CK</option>
+  <option value="Zeiss">Zeiss</option>
+  <option value="FAOS">FAOS</option>
+  <option value="LAPS">LAPS</option>
+  <option value="Italia Independent">Italia Independent</option>
+  <option value="Walnut">Walnut</option>
+  <option value="Fastrack">Fastrack</option>
+  <option value="Akoni">Akoni</option>
+</select>
+
+<select name="type" id="">
+    <option >Select type</option>
+    <option value="Optical">Optical</option>
+    <option value="sunglasses">sunglasses </option>
+</select>
+<label for="image" >select product image</label>
+ <input type="file" name="image"  accept=".jpg  ,.jpeg, .png , .webp"  id="file" required >
+
+ <label for="image">select Additional images</label>
+ <input type="file" name="additional_images[]"  accept=".jpg  ,.jpeg, .png, .webp"  id="file" multiple >
 <input type="submit"  name="add-product" value="add product" id="" class="btn">
 
 
@@ -138,32 +208,7 @@ unlink('uploaded_img/'.$update_old_img);
 
 
     </div>
-    <div class="show-product flex">
-        <div class="product-box">
-<?php
-$select_product=mysqli_query($con,"SELECT * FROM products")or die ('query failed');
-if(mysqli_num_rows($select_product)>0){
-while($fetch_products=mysqli_fetch_assoc($select_product)){
-    ?>
-<div class="box flex">
-<img src="uploaded_img/<?php echo $fetch_products['image'];?>" alt="" >  
-<p class="product-name"><?php echo $fetch_products['name'];?></p>  
-<p class="product-price">$<?php echo $fetch_products['price'];?>/-</p>  
-<div class="button">
-    <a href="admin_product.php?update=<?php echo $fetch_products['id'];?>" id="update">UPDATE</a>
-    <a href="admin_product.php?delete=<?php echo $fetch_products['id'];?>" id="delete" onclick="return confirm('are you sure to delete the product ')">DELETE</a>
-
-</div>
-</div>
-<?php
-}
-}else{
-    echo '    <p class="text">no product added yet!</p>';
-}
-?>
-
-        </div>
-    </div>
+   
     <section class="edit-sec">
 
 <?php
@@ -203,6 +248,7 @@ document.querySelector(".update_container").style.display="none";
 
 
 
+    </section>
     </section>
 <script src="admin.js"></script>
 </body>
