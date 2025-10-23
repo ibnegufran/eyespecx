@@ -7,7 +7,7 @@ $admin_id=$_SESSION['admin_id'];
 if(!isset($admin_id)){
     header('location:login.php');
 }
-
+$message =[];
  // your database connection file
 
 if (isset($_POST['add-product'])) {
@@ -18,6 +18,8 @@ if (isset($_POST['add-product'])) {
     $category = $_POST['category'];
     $brand    = $_POST['brand'];
     $type     = $_POST['type'];
+    $description= $_POST['description'];
+
 
     // --- MAIN IMAGE handling ---
     $mainImageName = $_FILES['image']['name'];
@@ -47,11 +49,11 @@ if (isset($_POST['add-product'])) {
     $checkQuery = mysqli_query($con, "SELECT name FROM products WHERE name='$name'");
 
     if (mysqli_num_rows($checkQuery) > 0) {
-        echo "❌ Product already exists.";
+        $message[] = "Product already exists.";
     } else {
         // --- Save to database ---
         if ($mainImageSize > 2000000) {
-            echo "❌ Main image too large (max 2MB).";
+            $message[] = "Main image too large (max 2MB).";
         } else {
             // Move main image first
             move_uploaded_file($mainImageTmp, $mainImagePath);
@@ -62,14 +64,14 @@ if (isset($_POST['add-product'])) {
             ");
 
             if ($insertQuery) {
-                echo "✅ Product inserted successfully!";
+                $message[]= "Product inserted successfully!";
             } else {
-                echo "❌ Error while inserting product.";
+                $message[]= "Error while inserting product.";
             }
         }
     }
 }
-
+ 
 
 
 if(isset($_GET['delete'])){
@@ -128,24 +130,6 @@ unlink('uploaded_img/'.$update_old_img);
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 <body>
-<?php
-        if(isset($message)){
-            foreach($message as $message){
-                echo '
-                <div class="message">
-        <span>'.$message.'</span>
-            <i class="fa fa-times" onclick="this.parentElement.remove()"></i>
-        
-        </div>
-                
-                ';
-            }
-        }
-        
-        
-        
-        ?>
-
          <div class="dashboard-container">
     <?php
     include 'admin_sidebar.php' ;
@@ -167,6 +151,7 @@ unlink('uploaded_img/'.$update_old_img);
 </select>
 <select name="brand" id="">
   <option >Select Brand</option>
+  <option value="Gucci" >Gucci</option>
   <option value="Rayban">Rayban</option>
   <option value="Vogue">Vogue</option>
   <option value="Tommy Hilfiger">Tommy Hilfiger</option>
@@ -189,6 +174,7 @@ unlink('uploaded_img/'.$update_old_img);
     <option value="Optical">Optical</option>
     <option value="sunglasses">sunglasses </option>
 </select>
+<input type="text" name="description" id="" placeholder="enter product description" required>
 <label for="image" >select product image</label>
  <input type="file" name="image"  accept=".jpg  ,.jpeg, .png , .webp"  id="file" required >
 

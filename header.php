@@ -27,23 +27,44 @@
 <div class="header2">
 <div class="dropdown">
     <div class="fa fa-times cut"></div>
-    <div class="brands">
-      <li class="brand-item"><a href="#" rel="noopener">Rayban</a></li>
-    <li class="brand-item"><a href="#" rel="noopener">Vogue</a></li>
-    <li class="brand-item"><a href="#" rel="noopener">Tommy Hilfiger</a></li>
-    <li class="brand-item"><a href="#" rel="noopener">Oakley</a></li>
-    <li class="brand-item"><a href="#" rel="noopener">Lacoste</a></li>
-    <li class="brand-item"><a href="#" rel="noopener">Nova</a></li>
-    <li class="brand-item"><a href="#" rel="noopener">Velocity</a></li>
-    <li class="brand-item"><a href="#" rel="noopener">CK</a></li>
-    <li class="brand-item"><a href="#" rel="noopener">Zeiss</a></li>
-    <li class="brand-item"><a href="#" rel="noopener">FAOS</a></li>
-    <li class="brand-item"><a href="#" rel="noopener">LAPS</a></li>
-    <li class="brand-item"><a href="#" rel="noopener">Italia Independent</a></li>
-    <li class="brand-item"><a href="#" rel="noopener">Walnut</a></li>
-    <li class="brand-item"><a href="#" rel="noopener">Fastrack</a></li>
-    <li class="brand-item"><a href="#" rel="noopener">Akoni</a></li>
-    </div>
+    <div class="brands men-brands">
+        <li class="brand-item"><a href="#" data-gender="men" data-brand="Rayban">Rayban</a></li>
+        <li class="brand-item"><a href="#" data-gender="men" data-brand="Gucci">Gucci</a></li>
+        <li class="brand-item"><a href="#" data-gender="men" data-brand="Vogue">Vogue</a></li>
+        <li class="brand-item"><a href="#" data-gender="men" data-brand="Tommy Hilfiger">Tommy Hilfiger</a></li>
+        <li class="brand-item"><a href="#" data-gender="men" data-brand="Oakley">Oakley</a></li>
+        <li class="brand-item"><a href="#" data-gender="men" data-brand="Lacoste">Lacoste</a></li>
+        <li class="brand-item"><a href="#" data-gender="men" data-brand="Nova">Nova</a></li>
+        <li class="brand-item"><a href="#" data-gender="men" data-brand="Velocity">Velocity</a></li>
+        <li class="brand-item"><a href="#" data-gender="men" data-brand="CK">CK</a></li>
+        <li class="brand-item"><a href="#" data-gender="men" data-brand="Zeiss">Zeiss</a></li>
+        <li class="brand-item"><a href="#" data-gender="men" data-brand="FAOS">FAOS</a></li>
+        <li class="brand-item"><a href="#" data-gender="men" data-brand="LAPS">LAPS</a></li>
+        <li class="brand-item"><a href="#" data-gender="men" data-brand="Italia Independent">Italia Independent</a></li>
+        <li class="brand-item"><a href="#" data-gender="men" data-brand="Walnut">Walnut</a></li>
+        <li class="brand-item"><a href="#" data-gender="men" data-brand="Fastrack">Fastrack</a></li>
+        <li class="brand-item"><a href="#" data-gender="men" data-brand="Akoni">Akoni</a></li>
+      </div>
+
+      <!-- 👠 WOMEN BRANDS -->
+      <div class="brands women-brands">
+        <li class="brand-item"><a href="#" data-gender="women" data-brand="Rayban">Rayban</a></li>
+        <li class="brand-item"><a href="#" data-gender="women" data-brand="Gucci">Gucci</a></li>
+        <li class="brand-item"><a href="#" data-gender="women" data-brand="Vogue">Vogue</a></li>
+        <li class="brand-item"><a href="#" data-gender="women" data-brand="Tommy Hilfiger">Tommy Hilfiger</a></li>
+        <li class="brand-item"><a href="#" data-gender="women" data-brand="Oakley">Oakley</a></li>
+        <li class="brand-item"><a href="#" data-gender="women" data-brand="Lacoste">Lacoste</a></li>
+        <li class="brand-item"><a href="#" data-gender="women" data-brand="Nova">Nova</a></li>
+        <li class="brand-item"><a href="#" data-gender="women" data-brand="Velocity">Velocity</a></li>
+        <li class="brand-item"><a href="#" data-gender="women" data-brand="CK">CK</a></li>
+        <li class="brand-item"><a href="#" data-gender="women" data-brand="Zeiss">Zeiss</a></li>
+        <li class="brand-item"><a href="#" data-gender="women" data-brand="FAOS">FAOS</a></li>
+        <li class="brand-item"><a href="#" data-gender="women" data-brand="LAPS">LAPS</a></li>
+        <li class="brand-item"><a href="#" data-gender="women" data-brand="Italia Independent">Italia Independent</a></li>
+        <li class="brand-item"><a href="#" data-gender="women" data-brand="Walnut">Walnut</a></li>
+        <li class="brand-item"><a href="#" data-gender="women" data-brand="Fastrack">Fastrack</a></li>
+        <li class="brand-item"><a href="#" data-gender="women" data-brand="Akoni">Akoni</a></li>
+      </div>
     </div>
     <div class="about-drop">
     <div class="fa fa-times cut"></div>
@@ -55,7 +76,7 @@
    <div class="navbar flex">
    <h1><a href="/"><img src="./images/logo2.png" alt="" ></a></h1>
     <nav class="menu_con">
-        <a href="home.php" class="">home</a>
+        <a href="index.php" class="">home</a>
         <a  class="dropdown-show">Men</a>
         <a  class="dropdown-show">Women</a>
         <a  class="dropdown-show">Brands</a>
@@ -73,3 +94,93 @@
 </div>
 
 </header>
+<script>
+    
+const dropdownShow = document.querySelectorAll(".dropdown-show");
+const dropdown = document.querySelector(".dropdown");
+const aboutMenu = document.querySelector(".about");
+const aboutDropdown = document.querySelector(".about-drop");
+const cutIcon = document.querySelectorAll(".cut");
+const menBrands = document.querySelector(".men-brands");
+const womenBrands = document.querySelector(".women-brands");
+const brandLinks = document.querySelectorAll(".brand-item a");
+
+// Hide both brand lists initially
+menBrands.style.display = "none";
+womenBrands.style.display = "none";
+
+// Show brands on hover
+dropdownShow.forEach(btn => {
+  btn.addEventListener("mouseenter", () => {
+    const type = btn.getAttribute("data-type");
+    dropdown.style.transform = "scale(1)";
+
+    if (type === "men") {
+      menBrands.style.display = "grid";
+      womenBrands.style.display = "none";
+    } else if (type === "women") {
+      womenBrands.style.display = "grid";
+      menBrands.style.display = "none";
+    } else if (type !== "women" && type !== "men") {
+      womenBrands.style.display = "grid";
+      menBrands.style.display = "none";
+    }
+  });
+
+  btn.addEventListener("mouseleave", () => {
+    dropdown.style.transform = "scale(0)";
+  });
+});
+
+// Hide dropdown on mouse leave
+dropdown.addEventListener("mouseenter", () => {
+  dropdown.style.transform = "scale(1)";
+});
+dropdown.addEventListener("mouseleave", () => {
+  dropdown.style.transform = "scale(0)";
+});
+
+// Cut icon hide
+cutIcon.forEach(icon => {
+  icon.addEventListener("click", () => {
+    dropdown.style.transform = "scale(0)";
+  });
+});
+
+// Redirect to products page on brand click
+brandLinks.forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const gender = link.getAttribute("data-gender");
+    const brand = link.getAttribute("data-brand");
+    if (gender !== "Women" && gender !== "Men") {
+       window.location.href = `brand_products.php?brand=${brand}`;
+    }else{
+      window.location.href = `brand_products.php?gender=${gender}&brand=${brand}`;
+    }
+  });
+});
+aboutMenu.addEventListener("mouseenter", () => {
+  // aaboutMenu.style.visibility = "visible";
+  aboutDropdown.style.transform = "scale(1)";
+
+});
+aboutMenu.addEventListener("mouseleave", () => {
+  // aboutDropdown.style.visibility = "hidden";
+  aboutDropdown.style.transform = "scale(0)";
+
+});
+
+
+aboutDropdown.addEventListener("mouseenter", () => {
+  // aaboutMenu.style.visibility = "visible";
+  aboutDropdown.style.transform = "scale(1)";
+
+});
+aboutDropdown.addEventListener("mouseleave", () => {
+  // aboutDropdown.style.visibility = "hidden";
+  aboutDropdown.style.transform = "scale(0)";
+
+});
+
+</script>

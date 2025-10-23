@@ -45,6 +45,11 @@ search_btn.addEventListener("keyup", function  (event) {
 	// body... 
 });
 
+
+setTimeout(() => {
+  document.querySelectorAll('.toast').forEach(t => t.remove());
+}, 3500);
+
 // document.querySelector("#menu-btn").onclick=()=>{
 //     navbar
 // }

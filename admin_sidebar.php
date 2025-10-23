@@ -1,12 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="optics.css">
-    <title>Document</title>
-</head>
-<body>
+  <?php
+
+        
+if(!empty($message)){
+   foreach($message as $message){
+      echo '
+      <div class="message">
+         <span>'.$message.'</span>
+         <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+      </div>
+      ';
+   }
+}
+?>
+
+
+
+
     <div class="sidebar">
         <h1>Admin Panel</h1>
         <a href="admin_page.php">dashboard</a>
@@ -15,5 +24,10 @@
         <a href="admin_users.php">Add banner</span></a>
        
     </div>
-</body>
-</html>
+    <script>
+     setTimeout(() => {
+  document.querySelectorAll('.message').forEach(t => t.remove());
+}, 3500);
+
+
+    </script>
