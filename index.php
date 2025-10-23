@@ -326,12 +326,7 @@ const logoTrack = document.querySelector(".logo-track");
 
 
 
-let menuBtn=document.querySelector("#menu-btn");
-menuBtn.addEventListener("click",()=>{
-    document.querySelector(".menu_con").classList.toggle("nav-active");
-  
 
-})
 
 for (let i = 0; i < 3; i++) {
   if(slides[i]){
@@ -387,6 +382,7 @@ const autoSlider=setInterval(()=>{
 
       </script>
      <!-- <script src="script.js"></script> -->
+      <script src="optics.js"></script>
  </body>
 
  </html>

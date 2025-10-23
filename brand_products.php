@@ -63,7 +63,7 @@ if(isset($_GET['gender']) && isset($_GET['brand'])){
 
 </div>
 
-
+<script src="optics.js"></script>
 
      </body>
      </html>

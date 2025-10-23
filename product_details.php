@@ -114,6 +114,6 @@ if (isset($_GET['id'])) {
     </table>
     </div>
 </section>
-
+<script src="optics.js"></script>
 </body>
 </html>
